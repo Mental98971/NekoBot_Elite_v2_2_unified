@@ -39,6 +39,7 @@ jobs:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           PYTHONPATH: .
+          HTTPX_TIMEOUT: "60.0"
         run: python -m bot
 
       - name: Auto-restart Next Workflow Run
